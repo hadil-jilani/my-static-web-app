@@ -27,11 +27,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: react-app # Adjust according to your project structure
+        working-directory: react-app
+
+      - name: Run ESLint
+        run: npm run lint
+        working-directory: react-app
 
       - name: Build React app
         run: npm run build
-        working-directory: react-app # Adjust according to your project structure
+        working-directory: react-app
 
       - name: Build And Deploy
         id: builddeploy
